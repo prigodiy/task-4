@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    <Resource name="jdbc/quiz_system_db" auth="Container" type="javax.sql.DataSource"
+              maxActive="50" maxIdle="50" maxWait="50"
+              username="root" password="root" driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/quiz_system_db"/>
+</Context>
