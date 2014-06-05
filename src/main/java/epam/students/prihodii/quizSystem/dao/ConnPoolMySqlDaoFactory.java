@@ -1,5 +1,12 @@
 package epam.students.prihodii.quizSystem.dao;
 
+import epam.students.prihodii.quizSystem.dao.MySqlDao.MySqlClassDao;
+import epam.students.prihodii.quizSystem.dao.MySqlDao.MySqlQuizDao;
+import epam.students.prihodii.quizSystem.dao.MySqlDao.MySqlTutorDao;
+import epam.students.prihodii.quizSystem.dao.interfaces.ClassDao;
+import epam.students.prihodii.quizSystem.dao.interfaces.QuizDao;
+import epam.students.prihodii.quizSystem.dao.interfaces.TutorDao;
+
 import javax.naming.Context;
 import javax.naming.InitialContext;
 import javax.naming.NamingException;
@@ -29,5 +36,15 @@ public class ConnPoolMySqlDaoFactory extends DaoFactory {
     @Override
     public TutorDao getTutorDao() {
         return new MySqlTutorDao(this);
+    }
+
+    @Override
+    public ClassDao getClassDao() {
+        return new MySqlClassDao(this);
+    }
+
+    @Override
+    public QuizDao getQuizDao() {
+        return new MySqlQuizDao(this);
     }
 }

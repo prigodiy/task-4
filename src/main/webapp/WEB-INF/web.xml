@@ -11,14 +11,19 @@
     </welcome-file-list>
 
     <servlet>
-        <servlet-name>mainServlet</servlet-name>
-        <servlet-class>epam.students.prihodii.quizSystem.servlets.MainServlet</servlet-class>
+        <servlet-name>ControlServlet</servlet-name>
+        <servlet-class>epam.students.prihodii.quizSystem.control.ControlServlet</servlet-class>
     </servlet>
-
     <servlet-mapping>
-        <servlet-name>mainServlet</servlet-name>
-        <url-pattern>/login</url-pattern>
+        <servlet-name>ControlServlet</servlet-name>
+        <url-pattern>/pages/*</url-pattern>
     </servlet-mapping>
+
+    <session-config>
+        <session-timeout>
+            -1
+        </session-timeout>
+    </session-config>
 
     <resource-ref>
         <description>DB Connection</description>

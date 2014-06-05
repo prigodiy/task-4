@@ -1,14 +1,20 @@
 package epam.students.prihodii.quizSystem.entity;
 
+import java.util.List;
+
 public class Tutor {
 
     private int id;
     private String login;
     private String password;
+    private List<Class> classes;
 
-    public Tutor(String login, String password) {
-        this.login = login;
-        this.password = password;
+    public List<Class> getClasses() {
+        return classes;
+    }
+
+    public void setClasses(List<Class> classes) {
+        this.classes = classes;
     }
 
     public int getId() {

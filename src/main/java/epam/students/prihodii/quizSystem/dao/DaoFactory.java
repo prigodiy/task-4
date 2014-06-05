@@ -1,5 +1,9 @@
 package epam.students.prihodii.quizSystem.dao;
 
+import epam.students.prihodii.quizSystem.dao.interfaces.ClassDao;
+import epam.students.prihodii.quizSystem.dao.interfaces.QuizDao;
+import epam.students.prihodii.quizSystem.dao.interfaces.TutorDao;
+
 import java.sql.Connection;
 import java.sql.SQLException;
 
@@ -24,4 +28,8 @@ public abstract class DaoFactory {
     public abstract Connection getConnection() throws SQLException;
 
     public abstract TutorDao getTutorDao();
+
+    public abstract ClassDao getClassDao();
+
+    public abstract QuizDao getQuizDao();
 }

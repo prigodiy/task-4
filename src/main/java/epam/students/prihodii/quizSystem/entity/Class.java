@@ -7,12 +7,16 @@ public class Class {
 
     private int id;
     private String name;
+    private int tutorId;
     private List<Quiz> quizzes = new ArrayList<Quiz>();
     private List<Student> students = new ArrayList<Student>();
 
-    public Class(int id, String name) {
-        this.id = id;
-        this.name = name;
+    public int getTutorId() {
+        return tutorId;
+    }
+
+    public void setTutorId(int tutorId) {
+        this.tutorId = tutorId;
     }
 
     public void setId(int id) {

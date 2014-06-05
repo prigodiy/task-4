@@ -3,14 +3,8 @@ package epam.students.prihodii.quizSystem.entity;
 public class Quiz {
 
     private int id;
-    private int name;
+    private String name;
     private Class quizClass;
-
-    public Quiz(int id, int name, Class quizClass) {
-        this.id = id;
-        this.name = name;
-        this.quizClass = quizClass;
-    }
 
     public int getId() {
         return id;
@@ -20,11 +14,11 @@ public class Quiz {
         this.id = id;
     }
 
-    public int getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 
@@ -53,7 +47,6 @@ public class Quiz {
     @Override
     public int hashCode() {
         int result = id;
-        result = 31 * result + name;
         result = 31 * result + (quizClass != null ? quizClass.hashCode() : 0);
         return result;
     }
